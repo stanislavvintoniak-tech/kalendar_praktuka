@@ -1,85 +1,122 @@
-# Calendar Using Tkinter
+# 📅 CalendarInTkinter
 
-CalendarInTkinter is an implementation of calendar using tkinter package of python. Both Tk and tkinter are available on
-most Unix platforms, including macOS, as well as on Windows systems.
+**CalendarInTkinter** — це застосунок-календар, реалізований за допомогою бібліотеки **Tkinter** для Python. Бібліотеки **Tk** та **Tkinter** доступні на більшості Unix-подібних систем (включаючи macOS), а також на Windows.
 
-![demo](readme_assets/demo.gif)
+![Демонстрація роботи](readme_assets/demo.gif)
 
-## Features
+---
 
-- Multiple User login as well as authentication
-- Storing user data in user's file structure, in csv format
-- **C**reation, **R**ead, **U**pdate, **D**elte, on calendar-events of users
-- Time related calculations
-    - Date after a particular time period from a given date
-    - Time difference between given two dates
-    - Time after a particular time period
-- Time Unit conversions from
-    - sec to min
-    - year to week
-    - month to days etc.
+## ✨ Основні можливості
 
-## Installation
+### 👤 Керування користувачами
 
-```bash
-git clone https://github.com/gargujjwal/CalendarInTkinter.git
+* Реєстрація та авторизація кількох користувачів
+* Перевірка автентичності під час входу
+
+### 💾 Зберігання даних
+
+* Дані кожного користувача зберігаються окремо у файловій системі
+* Використання формату **CSV** для зберігання подій
+
+### 📆 Робота з подіями календаря
+
+Повний набір операцій **CRUD**:
+
+* ➕ **Створення** подій
+* 👀 **Перегляд** подій
+* ✏️ **Редагування** подій
+* 🗑️ **Видалення** подій
+
+### ⏱️ Обчислення часу та дат
+
+* Визначення дати після заданого проміжку часу
+* Обчислення різниці між двома датами
+* Розрахунок часу після заданого інтервалу
+
+### 🔄 Конвертація одиниць часу
+
+Підтримується конвертація між різними одиницями вимірювання часу, зокрема:
+
+* секунди → хвилини
+* години → дні
+* місяці → дні
+* роки → тижні
+* та інші варіанти
+
+---
+
+## 📦 Залежності
+
+### Python
+
+* Python **3.10** або новіший
+
+### Використані бібліотеки
+
+```text
+Babel==2.10.3
+future==0.18.2
+pytz==2022.1
+tkcalendar==1.6.1
 ```
 
-## Dependencies
+---
 
-- Python 3.10+
-    - Babel==2.10.3
-    - future==0.18.2
-    - pytz==2022.1
-    - tkcalendar==1.6.1
+## 🚀 Запуск проєкту локально
 
-## Run in your local environment
+### Linux / macOS
 
 ```bash
-# for linux & mac based systems 
-
-# create a virtual environment
+# Створення віртуального середовища
 python3 -m venv env
 
-# activate virtual environment
+# Активація віртуального середовища
 source env/bin/activate
 
-# install dependencies from requirements.txt
+# Встановлення залежностей
 python3 -m pip install -r requirements.txt
 
-# run the project
+# Запуск застосунку
 python3 main.py
 ```
-> Some Linux users might not have tkinter preinstalled, so they need to run ```sudo apt-get install python3-tk```
 
-```cmd
-:: For Windows
+> ⚠️ У деяких дистрибутивах Linux бібліотека Tkinter може бути не встановлена за замовчуванням. У такому випадку виконайте:
 
-:: create a virtual enviornment
-py -m venv env
-
-:: activate virtual enviornment
-.\env\Scripts\activate
-
-:: install dependencies from requirements.txt
-py -m pip install -r requirements.txt
-
-:: run the project
-py main.py
+```bash
+sudo apt-get install python3-tk
 ```
 
-## Screenshots
+---
 
-![Calendar View](readme_assets/calc_view.png)
-![Date Calculator](readme_assets/date_calc.png)
-![Time Calculator](readme_assets/time_calc.png)
-![Unit Conversion](readme_assets/unit_conv.png)
-![New Event View](readme_assets/new_event.png)
+### Windows
 
-## Contributing
+```cmd
+:: Створення віртуального середовища
+python -m venv env
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+:: Активація віртуального середовища
+.\env\Scripts\activate
 
-## License
+:: Встановлення залежностей
+python -m pip install -r requirements.txt
 
-[MIT](LICENSE.txt)
+:: Запуск застосунку
+python main.py
+```
+
+---
+
+## 🛠️ Технології
+
+* Python 3.10+
+* Tkinter
+* tkcalendar
+* CSV
+* Babel
+* pytz
+
+---
+
+## 📄 Ліцензія
+
+Цей проєкт розповсюджується відповідно до обраної ліцензії репозиторію.
